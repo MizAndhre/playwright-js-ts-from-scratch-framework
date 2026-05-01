@@ -16,18 +16,18 @@ import { defineConfig, devices } from '@playwright/test';
 // const config({})
 export default defineConfig({
 	testDir: './tests',
-	timeout: 40 * 1000, // timeout for the test
+	timeout: 30 * 1000, // timeout for the test
 
 	expect: {
-		// * timeout for validations
-		timeout: 40 * 1000,
+		// * timeout for validations => expect
+		timeout: 5 * 1000,
 	},
 
 	reporter: 'html',
 
 	use: {
 		/* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-		browserName: 'webkit',
+		browserName: 'chromium',
 		headless: false,
 	},
 });
