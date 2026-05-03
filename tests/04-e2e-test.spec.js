@@ -55,8 +55,10 @@ test('should login and find the element', async ({ page }) => {
 	await page.getByPlaceholder('Select Country').pressSequentially('co', { delay: 150 });
 	const countryDropdown = page.locator('.ta-results');
 
+	// select a country
 	await countryDropdown.first().waitFor();
-	// await countryDropdown.getByText('Colombia', { exact: true }).click(); // *my way
+	/// my way of selecting
+	// await countryDropdown.getByText('Colombia', { exact: true }).click();
 
 	//second way of selecting an element
 	const optionsCount = await countryDropdown.locator('button').count();
