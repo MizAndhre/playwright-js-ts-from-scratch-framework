@@ -17,9 +17,9 @@ test.beforeAll(async ({ browser }) => {
 	// ? Wait for the products to load
 	await page.locator('.card-body b').first().waitFor();
 	// save the json file
-	await context.storageState({ path: 'api-testing/state.json' });
+	await context.storageState({ path: 'tests/api/auth/state.json' });
 	// create a new context and passed the file
-	webContext = await browser.newContext({ storageState: 'api-testing/state.json' });
+	webContext = await browser.newContext({ storageState: 'tests/api/auth/state.json' });
 });
 
 test('should place an order', async () => {

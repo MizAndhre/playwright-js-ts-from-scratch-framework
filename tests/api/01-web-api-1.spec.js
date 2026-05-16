@@ -85,7 +85,7 @@ test('should place an order', async ({ page }) => {
 
 	// ? assertion
 	const orderIdDetails = await page.locator('.col-text.-main').textContent();
-	await page.pause();
+	// await page.pause();
 	expect(orderId.includes(orderIdDetails)).toBeTruthy();
 });
 

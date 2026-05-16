@@ -13,7 +13,7 @@ test('should intercept and abort properly', async ({ browser }) => {
 
 	await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
 
-	await page.pause();
+	// await page.pause();
 	console.log(await page.title());
 
 	const username = await page.locator('input#username');
@@ -28,5 +28,5 @@ test('should intercept and abort properly', async ({ browser }) => {
 	await page.locator('#signInBtn').click();
 
 	await expect(page).toHaveTitle('ProtoCommerce');
-	await page.pause();
+	// await page.pause();
 });
