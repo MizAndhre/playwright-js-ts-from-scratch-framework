@@ -25,14 +25,40 @@ export default defineConfig({
 
 	reporter: 'html',
 
-	use: {
-		/* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-		browserName: 'chromium',
-		headless: false,
+	projects: [
+		{
+			name: 'safari',
+			use: {
+				browserName: 'webkit',
+				headless: true,
+				screenshot: 'off', //take picture every step
+				trace: 'on', //tracing the steps
+			},
+		},
+		{
+			name: 'chrome',
+			use: {
+				browserName: 'chromium',
+				headless: false,
+				screenshot: 'on', //take picture every step
+				trace: 'retain-on-failure', //tracing the steps
+				// viewport: { width: 720, height: 720 },
+				// ...devices['Galaxy A55'],
+				ignoreHTTPSErrors: true, //not ssl certificate website
+				permissions: ['geolocation'], //permission for the browser
+				video: 'on',
+			},
+		},
+	],
 
-		screenshot: 'on', //take picture every step
-		trace: 'retain-on-failure', //tracing the steps
-	},
+	// use: {
+	// 	/* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+	// 	browserName: 'webkit',
+	// 	headless: true,
+
+	// 	screenshot: 'on', //take picture every step
+	// 	trace: 'retain-on-failure', //tracing the steps
+	// },
 });
 
 // ? to export the variable
