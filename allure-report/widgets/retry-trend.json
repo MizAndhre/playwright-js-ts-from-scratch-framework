@@ -1,1 +1,1 @@
-[{"buildOrder":8,"reportUrl":"http://localhost:9090/job/PlaywrightFramework/8/allure","reportName":"AllureReport","data":{"run":9,"retry":35}}]
+[{"buildOrder":9,"reportUrl":"http://localhost:9090/job/PlaywrightFramework/9/allure","reportName":"AllureReport","data":{"run":14,"retry":35}},{"buildOrder":8,"reportUrl":"http://localhost:9090/job/PlaywrightFramework/8/allure","reportName":"AllureReport","data":{"run":9,"retry":35}}]

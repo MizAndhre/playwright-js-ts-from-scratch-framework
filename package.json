@@ -9,6 +9,7 @@
     "apiTests": "npx playwright test --grep @Api",
     "safariConfig": "npx playwright test tests/api/01-web-api-1.spec.js --config playwright.config-2.js --project=safari",
     "apiTests:allure": "npx playwright test --grep @Api --reporter=line,allure-playwright",
+    "pomTs:allure": "npx playwright test tests/ts/pom-ts --reporter=line,allure-playwright",
     "allure:generate": "npx allure generate ./allure-results --clean",
     "allure:open": "npx allure open",
     "allure:report": "npm run apiTests:allure && npm run allure:generate"
@@ -21,6 +22,7 @@
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.6.0",
     "allure-commandline": "^2.41.0",
-    "allure-playwright": "^3.8.0"
+    "allure-playwright": "^3.8.0",
+    "typescript": "^6.0.3"
   }
 }
