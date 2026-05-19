@@ -1,9 +1,9 @@
 import { Locator, Page } from '@playwright/test';
 
 export class OrderHistoryPage {
-	title: Locator;
-	tableHeader: Locator;
-	allRows: Locator;
+	private readonly title: Locator;
+	private readonly tableHeader: Locator;
+	private readonly allRows: Locator;
 
 	constructor(page: Page) {
 		this.title = page.locator('h1');

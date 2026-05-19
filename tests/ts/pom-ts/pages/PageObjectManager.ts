@@ -9,14 +9,14 @@ import { OrderPage } from './OrderPage';
 import { OrderHistoryPage } from './OrdersHistoryPage';
 
 export class PageObjectManager {
-	page: Page;
-	loginPage: LoginPage;
-	dashboardPage: DashboardPage;
-	cartPage: CartPage;
-	checkoutPage: CheckoutPage;
-	orderPage: OrderPage;
-	orderHistoryPage: OrderHistoryPage;
-	orderDetailsPage: OrderDetailsPage;
+	private readonly page: Page;
+	private readonly loginPage: LoginPage;
+	private readonly dashboardPage: DashboardPage;
+	private readonly cartPage: CartPage;
+	private readonly checkoutPage: CheckoutPage;
+	private readonly orderPage: OrderPage;
+	private readonly orderHistoryPage: OrderHistoryPage;
+	private readonly orderDetailsPage: OrderDetailsPage;
 
 	constructor(page: Page) {
 		this.page = page;

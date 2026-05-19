@@ -1,9 +1,9 @@
 import { Locator, Page } from '@playwright/test';
 
 export class DashboardPage {
-	products: Locator;
-	productsText: Locator;
-	cart: Locator;
+	private readonly products: Locator;
+	private readonly productsText: Locator;
+	private readonly cart: Locator;
 
 	constructor(page: Page) {
 		this.products = page.locator('.card-body');

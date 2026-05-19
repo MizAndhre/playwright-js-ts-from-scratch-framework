@@ -1,10 +1,10 @@
 import { Page, Locator } from '@playwright/test';
 
 export class CheckoutPage {
-	readonly country: Locator;
-	readonly countryDropdown: Locator;
-	readonly emailLabel: Locator;
-	readonly placeOrderButton: Locator;
+	private readonly country: Locator;
+	private readonly countryDropdown: Locator;
+	private readonly emailLabel: Locator;
+	private readonly placeOrderButton: Locator;
 
 	constructor(page: Page) {
 		this.country = page.getByPlaceholder('Select Country');

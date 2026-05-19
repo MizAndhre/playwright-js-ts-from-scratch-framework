@@ -1,9 +1,9 @@
 import { Locator, Page } from '@playwright/test';
 
 export class OrderPage {
-	title: Locator;
-	orderId: Locator;
-	ordersHistoryButton: Locator;
+	private readonly title: Locator;
+	private readonly orderId: Locator;
+	private readonly ordersHistoryButton: Locator;
 
 	constructor(page: Page) {
 		this.title = page.locator('h1.hero-primary');
