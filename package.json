@@ -3,13 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "regression": "npx playwright test",
+    "webTests": "npx playwright test --grep @Web",
+    "apiTests": "npx playwright test --grep @Api",
+    "safariConfig": "npx playwright test tests/api/01-web-api-1.spec.js --config playwright.config-2.js --project=safari",
+    "apiTests:allure": "npx playwright test --grep @Api --reporter=line,allure-playwright",
+    "allure:generate": "npx allure generate ./allure-results --clean",
+    "allure:open": "npx allure open",
+    "allure:report": "npm run apiTests:allure && npm run allure:generate"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.59.1",
-    "@types/node": "^25.6.0"
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.6.0",
+    "allure-commandline": "^2.41.0",
+    "allure-playwright": "^3.8.0"
   }
 }

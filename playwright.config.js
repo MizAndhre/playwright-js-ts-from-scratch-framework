@@ -24,12 +24,12 @@ export default defineConfig({
 	},
 
 	reporter: 'html',
+	// reporter: [['line'], ['allure-playwright']],
 
 	use: {
 		/* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
 		browserName: 'chromium',
 		headless: false,
-
 		screenshot: 'on', //take picture every step
 		trace: 'retain-on-failure', //tracing the steps
 	},

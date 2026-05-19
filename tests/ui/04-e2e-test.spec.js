@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('should login and find the element', async ({ page }) => {
+test('@Web should login and find the element', async ({ page }) => {
 	await page.goto('https://rahulshettyacademy.com/client/#/auth/login');
 
 	//? LOGIN

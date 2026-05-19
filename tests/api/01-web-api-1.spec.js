@@ -53,7 +53,7 @@ test.beforeAll(async () => {
 
 // test.beforeEach(async () => {});
 
-test('should place an order', async ({ page }) => {
+test('@Api should place an order', async ({ page }) => {
 	//add token in the localStorage
 	await page.addInitScript((value) => {
 		window.localStorage.setItem('token', value);
