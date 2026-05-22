@@ -12,13 +12,16 @@
     "pomTs:allure": "npx playwright test tests/ts/pom-ts --reporter=line,allure-playwright",
     "allure:generate": "npx allure generate ./allure-results --clean",
     "allure:open": "npx allure open",
-    "allure:report": "npm run apiTests:allure && npm run allure:generate"
+    "allure:report": "npm run apiTests:allure && npm run allure:generate",
+    "cucumber": "cucumber-js --config cucumber.json",
+    "cucumber:retry": "npx cucumber-js tests/cucumber/features/ErrorValidations.feature --parallel 2 --retry 1  --exit --format html:tests/cucumber/cucumber-report.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
+    "@cucumber/cucumber": "^12.9.0",
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.6.0",
     "allure-commandline": "^2.41.0",

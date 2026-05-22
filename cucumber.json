@@ -1,0 +1,15 @@
+{
+    "default": {
+        "require": [
+            "tests/cucumber/features/step_defenitions/**/*.js",
+            "tests/cucumber/features/support/**/*.js"
+        ],
+        "timeout": 100000,
+        "forceExit": true
+    },
+    "all": {
+        "paths": [
+            "tests/cucumber/features/**/*.feature"
+        ]
+    }
+}

@@ -1,4 +1,4 @@
-// import { page } from '@playwright/test';
+
 
 export class DashboardPage {
 	constructor(page) {

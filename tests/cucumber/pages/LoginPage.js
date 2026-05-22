@@ -1,4 +1,3 @@
-// import { page } from '@playwright/test';
 
 export class LoginPage {
 	constructor(page) {
