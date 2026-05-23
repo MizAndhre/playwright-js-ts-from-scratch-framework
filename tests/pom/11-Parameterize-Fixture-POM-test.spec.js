@@ -6,7 +6,7 @@ import { PageObjectManager } from './pages/PageObjectManager.js';
 const dataSet = JSON.parse(JSON.stringify(require('./data/placeOrderTestDataParameterize.json')));
 
 //? Send custom Fixture after page
-customTest('should login and do checkout workflow ', async ({ page, testDataForOrder }) => {
+customTest('@POM should login and do checkout workflow ', async ({ page, testDataForOrder }) => {
 	const POM = new PageObjectManager(page);
 
 	//  LOGIN

@@ -4,7 +4,7 @@ import { PageObjectManager } from './pages/PageObjectManager';
 // ? Individual Pages
 // import { LoginPage } from './pages/LoginPage';
 
-test('should login and find the element', async ({ page }) => {
+test('@POM should login and find the element', async ({ page }) => {
 	const POM = new PageObjectManager(page);
 
 	// ? Instance login page

@@ -3,7 +3,7 @@ import { PageObjectManager } from './pages/PageObjectManager';
 // ? Import JSON data -> string -> Object
 const dataSet = JSON.parse(JSON.stringify(require('./data/placeOrderTestData.json')));
 
-test('should login and find the element', async ({ page }) => {
+test('@POM should login and find the element', async ({ page }) => {
 	const POM = new PageObjectManager(page);
 
 	//  LOGIN

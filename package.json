@@ -14,12 +14,14 @@
     "allure:open": "npx allure open",
     "allure:report": "npm run apiTests:allure && npm run allure:generate",
     "cucumber": "cucumber-js --config cucumber.json",
-    "cucumber:retry": "npx cucumber-js tests/cucumber/features/ErrorValidations.feature --parallel 2 --retry 1  --exit --format html:tests/cucumber/cucumber-report.html"
+    "cucumber:retry": "npx cucumber-js tests/cucumber/features/ErrorValidations.feature --parallel 2 --retry 1  --exit --format html:tests/cucumber/cucumber-report.html",
+    "pomTests": "npx playwright test --grep @POM",
+    "parallelFile": "npx playwright test tests/UIBasics-Parallel.spec.js --reporter=line,allure-playwright"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
   "devDependencies": {
     "@cucumber/cucumber": "^12.9.0",
     "@playwright/test": "^1.60.0",

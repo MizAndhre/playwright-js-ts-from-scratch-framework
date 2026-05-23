@@ -6,7 +6,7 @@ const dataSet = JSON.parse(JSON.stringify(require('./data/placeOrderTestDataPara
 // ? Wrapping the test in a loop to iterate over the data set
 for (const data of dataSet) {
 	// ? Dinamically change the name of the test
-	test(`should login, select product, order and verify the order for ${data.email} `, async ({
+	test(`@POM should login, select product, order and verify the order for ${data.email} `, async ({
 		page,
 	}) => {
 		const POM = new PageObjectManager(page);
