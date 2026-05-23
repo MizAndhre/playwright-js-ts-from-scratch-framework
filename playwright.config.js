@@ -16,6 +16,7 @@ import { defineConfig, devices } from '@playwright/test';
 // const config({})
 export default defineConfig({
 	testDir: './tests',
+	testMatch: '**/*.spec.js',
 	timeout: 30 * 1000, // timeout for the test
 
 	retries: 1,
