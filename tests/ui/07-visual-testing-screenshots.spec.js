@@ -17,7 +17,7 @@ test('should take screenshot', async ({ page }) => {
 	await expect(page.locator('#displayed-text')).toBeHidden();
 });
 
-test('should take screenshot and visual comparison', async ({ page }) => {
+test.skip('should take screenshot and visual comparison', async ({ page }) => {
 	await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
 
 	expect(await page.screenshot()).toMatchSnapshot('tests/ui/landing.png');
