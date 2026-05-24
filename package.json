@@ -16,7 +16,8 @@
     "cucumber": "cucumber-js --config cucumber.json",
     "cucumber:retry": "npx cucumber-js tests/cucumber/features/ErrorValidations.feature --parallel 2 --retry 1  --exit --format html:tests/cucumber/cucumber-report.html",
     "pomTests": "npx playwright test --grep @POM",
-    "parallelFile": "npx playwright test tests/UIBasics-Parallel.spec.js --reporter=line,allure-playwright"
+    "parallelFile": "npx playwright test tests/UIBasics-Parallel.spec.js --reporter=line,allure-playwright",
+    "azureTests": "npx playwright test --config=playwright.service.config.js --workers=1"
   },
   "keywords": [],
   "author": "",

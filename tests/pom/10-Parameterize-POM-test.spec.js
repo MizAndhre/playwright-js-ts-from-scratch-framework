@@ -26,6 +26,7 @@ for (const data of dataSet) {
 		await dashboardPage.searchProductAddToCart(productName);
 		//  Check if the product is in the cart
 		await dashboardPage.navigateToCart();
+		await page.waitForLoadState('networkidle');
 		await expect(page.getByText(productName)).toBeVisible();
 
 		// CHECKOUT

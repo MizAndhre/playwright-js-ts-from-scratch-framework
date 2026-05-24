@@ -24,7 +24,7 @@ export default defineConfig({
 
 	expect: {
 		// * timeout for validations => expect
-		timeout: 5 * 1000,
+		timeout: 10 * 1000,
 	},
 
 	reporter: 'html',

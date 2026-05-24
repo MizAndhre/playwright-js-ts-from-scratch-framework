@@ -21,6 +21,11 @@ test('@POM should login and find the element', async ({ page }) => {
 	await dashboardPage.searchProductAddToCart(productName);
 	//  Check if the product is in the cart
 	await dashboardPage.navigateToCart();
+	// console.log(await page.locator('ul.cartWrap.ng-star-inserted').allTextContents());
+	// console.log(await page.locator('ul.cartWrap.ng-star-inserted').count());
+	await page.waitForLoadState('networkidle');
+	// console.log(await page.locator('ul.cartWrap.ng-star-inserted').allTextContents());
+	// console.log(await page.locator('ul.cartWrap.ng-star-inserted').count());
 	await expect(page.getByText(productName)).toBeVisible();
 
 	// CHECKOUT
